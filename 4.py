@@ -1,8 +1,4 @@
-i = int(input())
-r = 0
-while i > 10:
-    d = i % 10
-    i //= 10
-    if d > r:
-        r = d
-print(r)
+string = input("").split()
+
+for n, i in enumerate(string, 1):
+    print(f"{n}) {i:.10}")

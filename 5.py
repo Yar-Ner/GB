@@ -1,14 +1,12 @@
-viruchka = int(input("Выручка: "))
-izderzhka = int(input("Издержки: "))
+l = [4, 3, 3, 2, 1]
+new = int(input())
 
-if viruchka < izderzhka:
-	print("Убыток")
-elif viruchka > izderzhka:
-	print("Выручка больше")
-	kol_vo = int(input("Количество сотрудников: "))
-	print("Выручка:", viruchka - izderzhka)
-	print("Рентабельность: ", int(pribil / viruchka))
-	itog = pribil / kol_vo
-	print("Прибыль на одного сотрудника: ", itog)	
-else:
-	print("Не думал что будет такая подлянка, они равны)")
+i = 1
+
+for n in l:
+	if new <= n:
+		i += 1
+	else:
+		break
+l.insert(i, new)
+print(l)
