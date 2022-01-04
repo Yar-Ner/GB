@@ -1,6 +1,3 @@
-l = list(input())
-
-for i in range(1, len(l), 2):
-	l[i - 1], l[i] = l[i], l[i - 1]
-
-print(l)
+def my_func(*info):
+	print(info)
+my_func(input("Имя: "), input("Фамилия: "), input("Год рождения: "), input("Город проживания: "), input("Мыло: "), input("Телефон: "))
