@@ -1,4 +1,4 @@
-string = input("").split()
+def my_fun(x, y):
+    print(x ** y)
 
-for n, i in enumerate(string, 1):
-    print(f"{n}) {i:.10}")
+my_fun(int(input()), int(input()))
