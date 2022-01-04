@@ -1,12 +1,16 @@
-l = [4, 3, 3, 2, 1]
-new = int(input())
-
-i = 1
-
-for n in l:
-	if new <= n:
-		i += 1
-	else:
-		break
-l.insert(i, new)
-print(l)
+def sum ():
+    sum_res = 0
+    ext = False
+    while ext == False:
+        numb = input('! - выход ').split()
+        res = 0
+        for el in range(len(numb)):
+            if numb[el] == '!':
+                ext = True
+                break
+            else:
+                res = res + int(numb[el])
+        sum_res = sum_res + res
+        print(f'сумма = {sum_res}')
+    print(f'общая сумма = {sum_res}')
+sum()
