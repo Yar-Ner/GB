@@ -1,12 +1,10 @@
-l = [4, 3, 3, 2, 1]
-new = int(input())
+a = []
+one = 1
 
-i = 1
+for i in range(100, 1001):
+    if i%2 == 0:
+        a.append(i)
 
-for n in l:
-	if new <= n:
-		i += 1
-	else:
-		break
-l.insert(i, new)
-print(l)
+for i in a:
+    one = one * i
+print(one) 
