@@ -1,16 +1,13 @@
-def sum ():
-    sum_res = 0
-    ext = False
-    while ext == False:
-        numb = input('! - выход ').split()
-        res = 0
-        for el in range(len(numb)):
-            if numb[el] == '!':
-                ext = True
-                break
-            else:
-                res = res + int(numb[el])
-        sum_res = sum_res + res
-        print(f'сумма = {sum_res}')
-    print(f'общая сумма = {sum_res}')
-sum()
+def summary():
+    try:
+        with open('5.txt', 'w+') as file_obj:
+            line = input('Введите цифры через пробел \n')
+            file_obj.writelines(line)
+            my_numb = line.split()
+
+            print(sum(map(int, my_numb)))
+    except IOError:
+        print('Ошибка в файле')
+    except ValueError:
+        print('Неправильно набран номер. Ошибка ввода-вывода')
+summary()
