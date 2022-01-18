@@ -1,16 +1,7 @@
-def my_fun(a, b, c):
-
-	mass = [a, b, c]
-
-	maxim1 = max(mass)
-
-	ind = mass.index(maxim1)
-
-	del(mass[ind])
-
-
-	maxim2 = max(mass)
-
-	print(int(maxim1) + int(maxim2))
-
-my_fun(int(input()), int(input()), int(input()))
+with open('3.txt', 'r', encoding='utf-8') as f:
+    b = split(str(f.read()))
+    c=[]
+    for i in b:
+        if(int(i).isdigit()):
+            c.append(int(i))
+    print(c)
