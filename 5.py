@@ -1,12 +1,20 @@
-l = [4, 3, 3, 2, 1]
-new = int(input())
-
-i = 1
-
-for n in l:
-	if new <= n:
-		i += 1
-	else:
-		break
-l.insert(i, new)
-print(l)
+class Stationery:
+	def __init__(self, title):
+		self.title = title
+	def draw(self):
+		return f'Запуск отрисовки'
+class Pen(Stationery):
+	def draw(self):
+		return f'Запуск отрисовки {self.title}'
+class Pencil(Stationery):
+	def draw(self):
+		return f'Запуск отрисовки {self.title}'
+class Handle(Stationery):
+	def draw(self):
+		return f'Запуск отрисовки {self.title}'
+pen = Pen('ручкой')
+print(pen.draw())
+pencil = Pencil('карандашем')
+print(pencil.draw())
+handle = Handle('маркером')
+print(handle.draw())
